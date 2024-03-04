@@ -1,0 +1,73 @@
+.switch-container {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    position: relative;
+    display: block;
+    width: 230px;
+    height: 130px;
+    background-color: #e0e0e0;
+    border-radius: 60px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0.5px;
+    left: 0.5px;
+    width: 129px;
+    height: 129px;
+    background-color: #5c5454;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.on-text,
+
+.off-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.on-text {
+    left: 10px;
+    opacity: 0;
+}
+
+.off-text {
+    right: 10px;
+    opacity: 1;
+}
+
+.toggle-label:not(.toggle-input:checked) {
+    background-color: #ff0000; 
+}
+
+.toggle-input:checked + .toggle-label {
+    background-color: #369839;
+}
+
+.toggle-input:checked + .toggle-label .toggle-slider {
+    transform: translateX(100px);
+}
+
+.toggle-input:checked + .toggle-label .on-text {
+    opacity: 1;
+}
+
+.toggle-input:checked + .toggle-label .off-text {
+    opacity: 0;
+}
+
+
